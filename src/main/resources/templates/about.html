@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	<h3 th:text="${name}"> </h3>
+	<h3 th:text="${date}"> </h3>
+	&nbsp;&nbsp;
+	<ul>
+	<li th:each="list:${list}">
+	<h1 th:text="${list}"></h1></li>
+	</ul>
+	
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	
+	<h1 th:text="${isActive} ? 'Active':'inActive'"
+	 th:style="${isActive} ? 'color:green':'color:red'"></h1>
+	
+	<h1 th:if="${gender}=='m'">MALE</h1>
+	<h1 th:unless="${gender}=='m'">FEMALE</h1>
+	
+  	<div th:switch="${#lists.size(mylist)}">
+	<h1 th:case="'0'">contain zero element</h1>
+	<h1 th:case="'1'">contain 1 element</h1>
+	<h1 th:case="*">contains more than 1 element</h1>
+	
+	</div> 
+	
+	
+</body>
+</html>
