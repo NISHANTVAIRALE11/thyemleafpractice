@@ -67,13 +67,7 @@ public class MyController {
 		m.addAttribute("subtitle",LocalDateTime.now());
 		  return "base";
 	  }
-	@RequestMapping("/base1")
-	  public String base1(Model m) {
-		
-		m.addAttribute("title","i am nishant");
-		m.addAttribute("subtitle",LocalDateTime.now());
-		  return "base1";
-	  }
+
 }
 
 
